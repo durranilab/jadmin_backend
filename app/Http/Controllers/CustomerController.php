@@ -59,4 +59,11 @@ class CustomerController extends Controller
         $customers = Customer::all();
         return response()->json($customers, 200);
     }
+
+    public function test(Request $request)
+    {
+        $id = $request->id;
+        dd($id);
+    }
+
 }

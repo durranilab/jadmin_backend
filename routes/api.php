@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\TestController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -24,4 +25,10 @@ Route::post('/updatecustomer', [CustomerController::class, 'updateCustomer']);
 Route::post('/deletecustomer', [CustomerController::class, 'deleteCustomer']);
 Route::post('/getcustomer', [CustomerController::class, 'getCustomer']);
 Route::post('/getcustomers', [CustomerController::class, 'getCustomers']);
+
+
+Route::post('/test/create', [TestController::class, 'create']);
+Route::post('/test/update', [TestController::class, 'update']);
+Route::post('/test/delete', [TestController::class, 'delete']);
+
 
